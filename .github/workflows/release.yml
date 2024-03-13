@@ -63,6 +63,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: version
     environment: GHCR Packages
+    permissions:
+      contents: read
+      packages: write
     strategy:
       fail-fast: false
       matrix:
