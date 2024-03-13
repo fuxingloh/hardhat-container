@@ -8,7 +8,7 @@
     "build:docker": "docker build -t ghcr.io/fuxingloh/hardhat-container:$(node -p \"require('./package.json').dependencies.hardhat\") -f Dockerfile ../../",
     "clean": "tsc --build --clean",
     "lint": "eslint .",
-    "push:docker": "docker build -t ghcr.io/fuxingloh/hardhat-container:$(node -p \"require('./package.json').dependencies.hardhat\") -f Dockerfile ../../ --output type=registry  --platform linux/amd64,linux/arm64"
+    "push:docker": "docker buildx build -t ghcr.io/fuxingloh/hardhat-container:$(node -p \"require('./package.json').dependencies.hardhat\") -f Dockerfile ../../ --output type=registry  --platform linux/amd64,linux/arm64"
   },
   "lint-staged": {
     "*": [
