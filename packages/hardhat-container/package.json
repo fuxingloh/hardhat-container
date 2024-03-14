@@ -20,7 +20,7 @@
     ]
   },
   "dependencies": {
-    "hardhat": "2.22.0"
+    "hardhat": "2.22.1"
   },
   "devDependencies": {
     "@workspace/tsconfig": "workspace:*"
