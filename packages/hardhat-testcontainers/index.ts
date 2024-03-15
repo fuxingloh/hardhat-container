@@ -6,7 +6,7 @@ export class HardhatContainer extends GenericContainer {
   constructor(image: string = `ghcr.io/fuxingloh/hardhat-container:${devDependencies['hardhat']}`) {
     super(image);
 
-    this.withWaitStrategy(Wait.forLogMessage(/Started HTTP and WebSocket JSON-RPC server at http:\/\/0\.0\.0\.0:8545/));
+    this.withWaitStrategy(Wait.forLogMessage('Started HTTP and WebSocket JSON-RPC server at'));
     this.withExposedPorts(8545);
   }
 

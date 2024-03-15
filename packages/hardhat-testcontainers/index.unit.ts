@@ -31,12 +31,12 @@ describe('default container', () => {
   });
 });
 
-describe('auto mining container', () => {
+describe('auto mining container 2000ms interval', () => {
   let container: StartedHardhatContainer;
   let client: PublicClient;
 
   beforeAll(async () => {
-    container = await new HardhatContainer().withAutoMining(3000).start();
+    container = await new HardhatContainer().withAutoMining(2000).start();
     client = createPublicClient({
       chain: hardhat,
       transport: http(container.getHostRpcUrl()),
@@ -51,6 +51,6 @@ describe('auto mining container', () => {
     await waitForExpect(async () => {
       const blockNumber = await client.getBlockNumber();
       expect(blockNumber).toStrictEqual(BigInt(1));
-    }, 10000);
+    }, 6000);
   });
 });

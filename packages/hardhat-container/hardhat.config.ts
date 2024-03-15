@@ -9,7 +9,10 @@ function getString(env: string, defaultValue?: string): string | undefined {
 }
 
 function getBoolean(env: string, defaultValue: boolean): boolean {
-  return (process.env[env] ?? defaultValue.toString()).toLowerCase() === 'true';
+  if (process.env[env] === undefined) {
+    return defaultValue;
+  }
+  return process.env[env] === 'true';
 }
 
 function getHardhatUserConfig(): HardhatUserConfig {
