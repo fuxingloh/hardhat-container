@@ -54,8 +54,8 @@ importers:
   packages/hardhat-container:
     dependencies:
       hardhat:
-        specifier: 2.22.0
-        version: 2.22.0(typescript@5.3.3)
+        specifier: 2.22.1
+        version: 2.22.1(typescript@5.3.3)
     devDependencies:
       '@workspace/tsconfig':
         specifier: workspace:*
@@ -74,8 +74,8 @@ importers:
         specifier: workspace:*
         version: link:../../workspace/tsconfig
       hardhat:
-        specifier: 2.22.0
-        version: 2.22.0(typescript@5.3.3)
+        specifier: 2.22.1
+        version: 2.22.1(typescript@5.3.3)
       hardhat-container:
         specifier: workspace:*
         version: link:../hardhat-container
@@ -981,91 +981,91 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  /@nomicfoundation/edr-darwin-arm64@0.3.0:
-    resolution: {integrity: sha512-Gg3jB1NJtqSXHjivSs5tws17r4w0V1aEW6/G6qJFYIGH+EnuNXCDXmNuYQ6++rQ7xBp56wueq93ILmtbyeGLwA==}
+  /@nomicfoundation/edr-darwin-arm64@0.3.1:
+    resolution: {integrity: sha512-qsdGS1Kfp6bVH4fk4hUzbsEm0fH7hGurraKk+IWby7Ecv+u7BuNaLVqeoYauYRFLYnGg8XZmcKOJ9BW35Y96Jg==}
     engines: {node: '>= 18'}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     optional: true
 
-  /@nomicfoundation/edr-darwin-x64@0.3.0:
-    resolution: {integrity: sha512-9leJCZx8jTdb0mIxY/pHypZViToZ7bS49CpwG8TTAi37HhgSUlM/iA4vrC7dA2LiBG+bXx/9BPJ0M/x0xP7EvQ==}
+  /@nomicfoundation/edr-darwin-x64@0.3.1:
+    resolution: {integrity: sha512-vtS2yuXIgjte42KEg/Aw/xmLRneVrIaDFhFMk578zg3m1UjNP+a29Lirw5fRXaqaL8aPyhRFmUy+1/V4MGaH+g==}
     engines: {node: '>= 18'}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     optional: true
 
-  /@nomicfoundation/edr-linux-arm64-gnu@0.3.0:
-    resolution: {integrity: sha512-fU3zE94J3IeFZArpMeOdX4+cPZ2+rJlqd7clIlxI8zAxcTNDE9tV8jQsugQEI6ufi1ibEPuG26kJorEvIhBQgw==}
+  /@nomicfoundation/edr-linux-arm64-gnu@0.3.1:
+    resolution: {integrity: sha512-GrbQcrVjTFLm/x8HdUzmJ1F8Juau9UEZM/YNr4sAxxTGvBHJlq73VaDZfArxj9Anq/u6aImPbs1ksu28D6XC3A==}
     engines: {node: '>= 18'}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     optional: true
 
-  /@nomicfoundation/edr-linux-arm64-musl@0.3.0:
-    resolution: {integrity: sha512-ya+kvEazgGZ+4HeJ/dc12je3DdiE0fzW4HVVkFreWPh1ZVKlH3nXtGN8I5FXO6eOMvvD0gdph6mDLo7z6S2NTg==}
+  /@nomicfoundation/edr-linux-arm64-musl@0.3.1:
+    resolution: {integrity: sha512-wOqugcbugmbZkh58PcIC5naT0ilwkZ0/qH86AniENxsviOaPSrL4aMYhtfypQ3MNxlfrlgLZFCC+D5eJTsNsgQ==}
     engines: {node: '>= 18'}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     optional: true
 
-  /@nomicfoundation/edr-linux-x64-gnu@0.3.0:
-    resolution: {integrity: sha512-ODi6NytOIYJLaKypzbgb7lWvR/YAOj6MhVdj0ZlySjyG/r+4yLfEdWXalYeMtTPw7oWwo7cncZNT7vaxcboSfQ==}
+  /@nomicfoundation/edr-linux-x64-gnu@0.3.1:
+    resolution: {integrity: sha512-V+kyUVqbt52dQRgaZK+EWuPWJ5h/PsCYZmiK18A+DQynZvird7jrTsDppcTvlv1Dvny8UAAP0q/ue7G67OoLJQ==}
     engines: {node: '>= 18'}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     optional: true
 
-  /@nomicfoundation/edr-linux-x64-musl@0.3.0:
-    resolution: {integrity: sha512-4+5kcETwTrrrRKl7Xi2RsEgN391w1ZyPlZWSC73z3zqHtllriSiynn7yeJedpLOPMUTvZKaoZHf6Ahguj6/UaA==}
+  /@nomicfoundation/edr-linux-x64-musl@0.3.1:
+    resolution: {integrity: sha512-vwrzLW40jQBDZVYmoJUBMwl36i7muB9AfT4F2fMRsb1JoOMgoeOBp8R+IAxbA6mjIJGwAClkRz5W5hCb3zMtMQ==}
     engines: {node: '>= 18'}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     optional: true
 
-  /@nomicfoundation/edr-win32-arm64-msvc@0.3.0:
-    resolution: {integrity: sha512-8Tmn2kwnx0ZEuj3E4zlP4CH9hMeuZStq4E1Q1um3LyuZ9f+0XdZoHvgSjskeTwxmkHcp4A5S3yg/noP1Auc8IA==}
+  /@nomicfoundation/edr-win32-arm64-msvc@0.3.1:
+    resolution: {integrity: sha512-7G29vUGrkwfbJqxo1V+QTxD976gVHx3Z0P5kwb1bErLmlP89cRNX3UN3/dzXpbKH9mp8ZcAjIcIbRUd4C+vH/A==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
     optional: true
 
-  /@nomicfoundation/edr-win32-ia32-msvc@0.3.0:
-    resolution: {integrity: sha512-6SRzowPhYeE0dU7oTpHePj0YCHwhZ+VvjHuJh0pJS+FmzduOJgzKX+tU7wLRCtYCMrb9/7sIr9HqsUsD/pTrVg==}
+  /@nomicfoundation/edr-win32-ia32-msvc@0.3.1:
+    resolution: {integrity: sha512-Q39eAkk/j1ZlvHcxQRTAzdY9qlckDNfiuJDgLYTlxdubpmX6KZucuUin/1A5NVhhCToTxw7aFwSglUROY3ejJw==}
     engines: {node: '>= 18'}
     cpu: [ia32]
     os: [win32]
     requiresBuild: true
     optional: true
 
-  /@nomicfoundation/edr-win32-x64-msvc@0.3.0:
-    resolution: {integrity: sha512-f54/qch6q9E5G2zVi5TqONZSwz9ILJckRg2pAbiZlofZMVplef9iEkPT4Q6A40YWdB9Oo+hDfpC3OaYLzcf5OQ==}
+  /@nomicfoundation/edr-win32-x64-msvc@0.3.1:
+    resolution: {integrity: sha512-8WzEzWUshw28xowVBhEyu4EQpx0TqNmDa70C3L1MWl5waym4U/VwbijFrI0Sb6Y1kdoNCdBTMvfr8OJNF2qJ/A==}
     engines: {node: '>= 18'}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     optional: true
 
-  /@nomicfoundation/edr@0.3.0:
-    resolution: {integrity: sha512-ygGAHss97Ii1TqPEo7lz1vfVKe/NhvvDK+78ehayOULhb1dxro+zP5PwVtXEgf5Qpum2TLIu2vZ7EqI9ft9ZwQ==}
+  /@nomicfoundation/edr@0.3.1:
+    resolution: {integrity: sha512-uPg1/CvIJpsCe7Ipe80bYnC/Q2Bt/O55KB2ssLx7Z0os4jwDvWBZas8tLMopT+hpOQnv8cZkHJap1iNDTwAfQg==}
     engines: {node: '>= 18'}
     optionalDependencies:
-      '@nomicfoundation/edr-darwin-arm64': 0.3.0
-      '@nomicfoundation/edr-darwin-x64': 0.3.0
-      '@nomicfoundation/edr-linux-arm64-gnu': 0.3.0
-      '@nomicfoundation/edr-linux-arm64-musl': 0.3.0
-      '@nomicfoundation/edr-linux-x64-gnu': 0.3.0
-      '@nomicfoundation/edr-linux-x64-musl': 0.3.0
-      '@nomicfoundation/edr-win32-arm64-msvc': 0.3.0
-      '@nomicfoundation/edr-win32-ia32-msvc': 0.3.0
-      '@nomicfoundation/edr-win32-x64-msvc': 0.3.0
+      '@nomicfoundation/edr-darwin-arm64': 0.3.1
+      '@nomicfoundation/edr-darwin-x64': 0.3.1
+      '@nomicfoundation/edr-linux-arm64-gnu': 0.3.1
+      '@nomicfoundation/edr-linux-arm64-musl': 0.3.1
+      '@nomicfoundation/edr-linux-x64-gnu': 0.3.1
+      '@nomicfoundation/edr-linux-x64-musl': 0.3.1
+      '@nomicfoundation/edr-win32-arm64-msvc': 0.3.1
+      '@nomicfoundation/edr-win32-ia32-msvc': 0.3.1
+      '@nomicfoundation/edr-win32-x64-msvc': 0.3.1
 
   /@nomicfoundation/ethereumjs-common@4.0.4:
     resolution: {integrity: sha512-9Rgb658lcWsjiicr5GzNCjI1llow/7r0k50dLL95OJ+6iZJcVbi15r3Y0xh2cIO+zgX0WIHcbzIu6FeQf9KPrg==}
@@ -3465,8 +3465,8 @@ packages:
   /graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
 
-  /hardhat@2.22.0(typescript@5.3.3):
-    resolution: {integrity: sha512-t1J+ThxNYANL6ub6yM5XC84RY38vhfG7ODBtVRNQFQozdALo3qZUjxDzyGQU0U0eswe6orK49hq9UpdB7nPXNQ==}
+  /hardhat@2.22.1(typescript@5.3.3):
+    resolution: {integrity: sha512-cTWYIJc5jQ132XUI8oRI/TO9L6oavPoJRCTRU9sIjkVxvkxz0Axz0K83Z3BEdJTqBQ2W84ZRoTekti84kBwCjg==}
     hasBin: true
     peerDependencies:
       ts-node: '*'
@@ -3479,7 +3479,7 @@ packages:
     dependencies:
       '@ethersproject/abi': 5.7.0
       '@metamask/eth-sig-util': 4.0.1
-      '@nomicfoundation/edr': 0.3.0
+      '@nomicfoundation/edr': 0.3.1
       '@nomicfoundation/ethereumjs-common': 4.0.4
       '@nomicfoundation/ethereumjs-tx': 5.0.4
       '@nomicfoundation/ethereumjs-util': 9.0.4
