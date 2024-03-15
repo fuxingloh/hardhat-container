@@ -22,9 +22,14 @@ export class HardhatContainer extends GenericContainer {
     });
   }
 
-  withAutoMining(intervalMs = 6000): this {
+  withMiningAuto(auto: boolean): this {
     return this.withEnvironment({
-      HARDHAT_MINING_AUTO: 'true',
+      HARDHAT_MINING_AUTO: auto.toString(),
+    });
+  }
+
+  withMiningInterval(intervalMs = 6000): this {
+    return this.withEnvironment({
       HARDHAT_MINING_INTERVAL: intervalMs.toString(),
     });
   }

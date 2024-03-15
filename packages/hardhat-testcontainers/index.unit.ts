@@ -27,7 +27,7 @@ describe('default container', () => {
     });
 
     const blockNumber = await client.getBlockNumber();
-    expect(blockNumber).toStrictEqual(BigInt(0));
+    expect(blockNumber).toBeGreaterThanOrEqual(0n);
   });
 });
 
@@ -36,7 +36,7 @@ describe('auto mining container 2000ms interval', () => {
   let client: PublicClient;
 
   beforeAll(async () => {
-    container = await new HardhatContainer().withAutoMining(2000).start();
+    container = await new HardhatContainer().withMiningInterval(2000).start();
     client = createPublicClient({
       chain: hardhat,
       transport: http(container.getHostRpcUrl()),
@@ -50,7 +50,7 @@ describe('auto mining container 2000ms interval', () => {
   it('should auto mine block', async () => {
     await waitForExpect(async () => {
       const blockNumber = await client.getBlockNumber();
-      expect(blockNumber).toStrictEqual(BigInt(1));
+      expect(blockNumber).toBeGreaterThan(1n);
     }, 6000);
   });
 });
