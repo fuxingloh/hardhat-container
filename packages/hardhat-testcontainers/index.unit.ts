@@ -17,13 +17,13 @@ describe('default container', () => {
   });
 
   it('should expose host rpc url', async () => {
-    expect(container.getHostRpcUrl()).toMatch(/http:\/\/localhost:\d+/);
+    expect(container.getHostRpcEndpoint()).toMatch(/http:\/\/localhost:\d+/);
   });
 
   it('should rpc(eth_blockNumber) via viem', async () => {
     const client = createPublicClient({
       chain: hardhat,
-      transport: http(container.getHostRpcUrl()),
+      transport: http(container.getHostRpcEndpoint()),
     });
 
     const blockNumber = await client.getBlockNumber();
@@ -39,7 +39,7 @@ describe('auto mining container 2000ms interval', () => {
     container = await new HardhatContainer().withMiningInterval(2000).start();
     client = createPublicClient({
       chain: hardhat,
-      transport: http(container.getHostRpcUrl()),
+      transport: http(container.getHostRpcEndpoint()),
     });
   });
 

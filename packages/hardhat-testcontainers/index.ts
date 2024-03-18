@@ -51,7 +51,7 @@ export class StartedHardhatContainer extends AbstractStartedContainer {
     super(startedTestContainer);
   }
 
-  getHostRpcUrl(): string {
+  getHostRpcEndpoint(): string {
     return `http://${this.getHost()}:${this.getMappedPort(8545)}`;
   }
 }
