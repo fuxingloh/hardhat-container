@@ -16,7 +16,7 @@ afterAll(async () => {
 });
 
 it('should rpc(eth_blockNumber) via viem', async () => {
-  const client = createPublicClient({ chain: hardhat, transport: http(container.getHostRpcUrl()) });
+  const client = createPublicClient({ chain: hardhat, transport: http(container.getHostRpcEndpoint()) });
 
   const blockNumber = await client.getBlockNumber();
   expect(blockNumber).toStrictEqual(BigInt(0));
