@@ -5,10 +5,10 @@
   "license": "MPL-2.0",
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
-    "build:docker": "docker buildx build -t ghcr.io/fuxingloh/hardhat-container:$(node -p \"require('./package.json').dependencies.hardhat\") -f Dockerfile ../../ --cache-from type=registry,ref=ghcr.io/fuxingloh/hardhat-container:build-cache",
+    "build:docker": "docker buildx build --progress=plain -t ghcr.io/fuxingloh/hardhat-container:$(node -p \"require('./package.json').dependencies.hardhat\") -f Dockerfile ../../ --cache-from type=registry,ref=ghcr.io/fuxingloh/hardhat-container:build-cache",
     "clean": "tsc --build --clean",
     "lint": "eslint .",
-    "push:docker": "docker buildx build -t ghcr.io/fuxingloh/hardhat-container:$(node -p \"require('./package.json').dependencies.hardhat\") -f Dockerfile ../../ --output type=registry --platform linux/amd64,linux/arm64 --cache-to type=registry,ref=ghcr.io/fuxingloh/hardhat-container:build-cache,mode=max --cache-from type=registry,ref=ghcr.io/fuxingloh/hardhat-container:build-cache"
+    "push:docker": "docker buildx build --progress=plain -t ghcr.io/fuxingloh/hardhat-container:$(node -p \"require('./package.json').dependencies.hardhat\") -f Dockerfile ../../ --output type=registry --platform linux/amd64,linux/arm64 --cache-to type=registry,ref=ghcr.io/fuxingloh/hardhat-container:build-cache,mode=max --cache-from type=registry,ref=ghcr.io/fuxingloh/hardhat-container:build-cache"
   },
   "lint-staged": {
     "*": [
