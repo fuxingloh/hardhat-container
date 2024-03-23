@@ -39,6 +39,6 @@
     "@workspace/tsconfig": "workspace:*",
     "hardhat": "2.22.2",
     "hardhat-container": "workspace:*",
-    "viem": "^2.8.16"
+    "viem": "^2.8.18"
   }
 }
