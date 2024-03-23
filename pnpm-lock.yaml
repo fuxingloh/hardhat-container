@@ -54,8 +54,8 @@ importers:
   packages/hardhat-container:
     dependencies:
       hardhat:
-        specifier: 2.22.1
-        version: 2.22.1(typescript@5.4.2)
+        specifier: 2.22.2
+        version: 2.22.2(typescript@5.4.2)
     devDependencies:
       '@workspace/tsconfig':
         specifier: workspace:*
@@ -74,8 +74,8 @@ importers:
         specifier: workspace:*
         version: link:../../workspace/tsconfig
       hardhat:
-        specifier: 2.22.1
-        version: 2.22.1(typescript@5.4.2)
+        specifier: 2.22.2
+        version: 2.22.2(typescript@5.4.2)
       hardhat-container:
         specifier: workspace:*
         version: link:../hardhat-container
@@ -3465,8 +3465,8 @@ packages:
   /graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
 
-  /hardhat@2.22.1(typescript@5.4.2):
-    resolution: {integrity: sha512-cTWYIJc5jQ132XUI8oRI/TO9L6oavPoJRCTRU9sIjkVxvkxz0Axz0K83Z3BEdJTqBQ2W84ZRoTekti84kBwCjg==}
+  /hardhat@2.22.2(typescript@5.4.2):
+    resolution: {integrity: sha512-0xZ7MdCZ5sJem4MrvpQWLR3R3zGDoHw5lsR+pBFimqwagimIOn3bWuZv69KA+veXClwI1s/zpqgwPwiFrd4Dxw==}
     hasBin: true
     peerDependencies:
       ts-node: '*'
