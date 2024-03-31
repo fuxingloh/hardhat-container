@@ -1,4 +1,6 @@
 import { AbstractStartedContainer, GenericContainer, StartedTestContainer, Wait } from 'testcontainers';
+import { createPublicClient, http, type HttpTransport, type PublicClient } from 'viem';
+import { hardhat as hardhatChain } from 'viem/chains';
 
 import { devDependencies } from './package.json';
 
@@ -47,11 +49,32 @@ export class HardhatContainer extends GenericContainer {
 }
 
 export class StartedHardhatContainer extends AbstractStartedContainer {
+  public readonly client: PublicClient<HttpTransport>;
+
   constructor(startedTestContainer: StartedTestContainer) {
     super(startedTestContainer);
+    this.client = createPublicClient<HttpTransport>({
+      cacheTime: 0,
+      chain: hardhatChain,
+      transport: http(this.getHostRpcEndpoint()),
+    });
   }
 
   getHostRpcEndpoint(): string {
     return `http://${this.getHost()}:${this.getMappedPort(8545)}`;
+  }
+
+  async evmMine(count: number = 1): Promise<void> {
+    for (let i = 0; i < count; i++) {
+      await this.client.request({ method: 'evm_mine' } as any);
+    }
+  }
+
+  async evmRevert(snapshotId: string): Promise<void> {
+    await this.client.request({ method: 'evm_revert', params: [snapshotId] } as any);
+  }
+
+  async evmSnapshot(): Promise<string> {
+    return await this.client.request({ method: 'evm_snapshot' } as any);
   }
 }
