@@ -32,13 +32,13 @@
     "preset": "@workspace/jest-preset"
   },
   "dependencies": {
-    "testcontainers": "^10.8.0"
+    "testcontainers": "^10.8.0",
+    "viem": "^2.9.5"
   },
   "devDependencies": {
     "@workspace/jest-preset": "workspace:*",
     "@workspace/tsconfig": "workspace:*",
     "hardhat": "2.22.2",
-    "hardhat-container": "workspace:*",
-    "viem": "^2.8.18"
+    "hardhat-container": "workspace:*"
   }
 }
