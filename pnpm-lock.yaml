@@ -67,8 +67,8 @@ importers:
         specifier: ^10.8.2
         version: 10.8.2
       viem:
-        specifier: ^2.9.15
-        version: 2.9.15(typescript@5.4.2)
+        specifier: ^2.9.16
+        version: 2.9.16(typescript@5.4.2)
     devDependencies:
       '@workspace/jest-preset':
         specifier: workspace:*
@@ -6034,8 +6034,8 @@ packages:
       convert-source-map: 2.0.0
     dev: true
 
-  /viem@2.9.15(typescript@5.4.2):
-    resolution: {integrity: sha512-7kcmHqybc3JhpjL8gKY7YxBYpZt1//qhoTZIU5Ez9JdyRCnYMMnJu20s7wd7Gv6a3zPbq8jV8dCp94a/NLJJcA==}
+  /viem@2.9.16(typescript@5.4.2):
+    resolution: {integrity: sha512-FQRfN4G7uKEUs5DYvVrH/kZmTkwcSDpTBxnadpwG1EEP8nHm57WDpSaGN7PwSPVgJ6rMo5MENT5hgnqaNTlb2w==}
     peerDependencies:
       typescript: '>=5.0.4'
     peerDependenciesMeta:
