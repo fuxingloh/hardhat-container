@@ -38,7 +38,7 @@
   "devDependencies": {
     "@workspace/jest-preset": "workspace:*",
     "@workspace/tsconfig": "workspace:*",
-    "hardhat": "2.22.2",
+    "hardhat": "2.22.3",
     "hardhat-container": "workspace:*"
   }
 }
