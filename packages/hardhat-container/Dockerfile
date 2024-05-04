@@ -10,7 +10,7 @@ ENV PNPM_HOME="/root/.local/share/pnpm/global" \
 RUN pnpm config set store-dir /root/.local/share/pnpm/global/store/v3
 
 # renovate: datasource=npm depName=turbo
-ENV TURBO_VERSION=1.13.2
+ENV TURBO_VERSION=1.13.3
 RUN pnpm add -g turbo@${TURBO_VERSION}
 
 # Isolate workspace by pruning non-related services.
