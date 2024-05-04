@@ -10,7 +10,7 @@ ENV PNPM_HOME="/root/.local/share/pnpm/global" \
 RUN pnpm config set store-dir /root/.local/share/pnpm/global/store/v3
 
 # renovate: datasource=npm depName=turbo
-ENV TURBO_VERSION=1.12.5
+ENV TURBO_VERSION=1.13.2
 RUN pnpm add -g turbo@${TURBO_VERSION}
 
 # Isolate workspace by pruning non-related services.
@@ -28,10 +28,9 @@ COPY .gitignore pnpm-workspace.yaml ./
 COPY --from=pruner /app/out/json/ .
 COPY --from=pruner /app/out/pnpm-lock.yaml ./pnpm-lock.yaml
 
-# Mount cache to copy from content-addressable store; ignore cross-device link errors due to different mount points.
+# Mount cache to copy from content-addressable store
 RUN --mount=type=cache,target=/root/.local/share/pnpm/global/store/v3\
-  pnpm install --frozen-lockfile\
-  | grep -v "cross-device link not permitted\|Falling back to copying packages from store"
+  pnpm install --frozen-lockfile
 
 COPY --from=pruner /app/out/full/ .
 
