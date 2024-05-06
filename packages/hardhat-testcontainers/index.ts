@@ -1,6 +1,17 @@
 import { AbstractStartedContainer, GenericContainer, StartedTestContainer, Wait } from 'testcontainers';
-import { createPublicClient, http, type HttpTransport, type PublicClient } from 'viem';
-import { hardhat as hardhatChain } from 'viem/chains';
+import {
+  type Client,
+  createClient,
+  http,
+  type HttpTransport,
+  type PublicActions,
+  publicActions,
+  type TestActions,
+  testActions,
+  type WalletActions,
+  walletActions,
+} from 'viem';
+import { hardhat } from 'viem/chains';
 
 import { devDependencies } from './package.json';
 
@@ -48,33 +59,36 @@ export class HardhatContainer extends GenericContainer {
   }
 }
 
+type HardhatChain = typeof hardhat;
+
+export type HardhatClient = Client<HttpTransport, HardhatChain> &
+  TestActions &
+  PublicActions<HttpTransport, HardhatChain> &
+  WalletActions<HardhatChain>;
+
 export class StartedHardhatContainer extends AbstractStartedContainer {
-  public readonly client: PublicClient<HttpTransport>;
+  public readonly client: HardhatClient;
 
   constructor(startedTestContainer: StartedTestContainer) {
     super(startedTestContainer);
-    this.client = createPublicClient<HttpTransport>({
-      cacheTime: 0,
-      chain: hardhatChain,
-      transport: http(this.getHostRpcEndpoint()),
-    });
+    this.client = this.createTestClient();
   }
 
   getHostRpcEndpoint(): string {
     return `http://${this.getHost()}:${this.getMappedPort(8545)}`;
   }
 
-  async evmMine(count: number = 1): Promise<void> {
-    for (let i = 0; i < count; i++) {
-      await this.client.request({ method: 'evm_mine' } as any);
-    }
-  }
-
-  async evmRevert(snapshotId: string): Promise<void> {
-    await this.client.request({ method: 'evm_revert', params: [snapshotId] } as any);
-  }
-
-  async evmSnapshot(): Promise<string> {
-    return await this.client.request({ method: 'evm_snapshot' } as any);
+  private createTestClient() {
+    return createClient({
+      cacheTime: 0,
+      chain: hardhat,
+      transport: http(this.getHostRpcEndpoint()),
+      name: 'Hardhat Client',
+      key: 'hardhat',
+      type: 'hardhat',
+    })
+      .extend(testActions({ mode: 'hardhat' }))
+      .extend(publicActions)
+      .extend(walletActions);
   }
 }
