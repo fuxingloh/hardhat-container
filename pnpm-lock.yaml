@@ -54,8 +54,8 @@ importers:
   packages/hardhat-container:
     dependencies:
       hardhat:
-        specifier: 2.22.3
-        version: 2.22.3(typescript@5.4.2)
+        specifier: 2.22.4
+        version: 2.22.4(typescript@5.4.2)
     devDependencies:
       '@workspace/tsconfig':
         specifier: workspace:*
@@ -77,8 +77,8 @@ importers:
         specifier: workspace:*
         version: link:../../workspace/tsconfig
       hardhat:
-        specifier: 2.22.3
-        version: 2.22.3(typescript@5.4.2)
+        specifier: 2.22.4
+        version: 2.22.4(typescript@5.4.2)
       hardhat-container:
         specifier: workspace:*
         version: link:../hardhat-container
@@ -978,73 +978,73 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  /@nomicfoundation/edr-darwin-arm64@0.3.5:
-    resolution: {integrity: sha512-gIXUIiPMUy6roLHpNlxf15DumU7/YhffUf7XIB+WUjMecaySfTGyZsTGnCMJZqrDyiYqWPyPKwCV/2u/jqFAUg==}
+  /@nomicfoundation/edr-darwin-arm64@0.3.7:
+    resolution: {integrity: sha512-6tK9Lv/lSfyBvpEQ4nsTfgxyDT1y1Uv/x8Wa+aB+E8qGo3ToexQ1BMVjxJk6PChXCDOWxB3B4KhqaZFjdhl3Ow==}
     engines: {node: '>= 18'}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     optional: true
 
-  /@nomicfoundation/edr-darwin-x64@0.3.5:
-    resolution: {integrity: sha512-0MrpOCXUK8gmplpYZ2Cy0holHEylvWoNeecFcrP2WJ5DLQzrB23U5JU2MvUzOJ7aL76Za1VXNBWi/UeTWdHM+w==}
+  /@nomicfoundation/edr-darwin-x64@0.3.7:
+    resolution: {integrity: sha512-1RrQ/1JPwxrYO69e0tglFv5H+ggour5Ii3bb727+yBpBShrxtOTQ7fZyfxA5h62LCN+0Z9wYOPeQ7XFcVurMaQ==}
     engines: {node: '>= 18'}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     optional: true
 
-  /@nomicfoundation/edr-linux-arm64-gnu@0.3.5:
-    resolution: {integrity: sha512-aw9f7AZMiY1dZFNePJGKho2k+nEgFgzUAyyukiKfSqUIMXoFXMf1U3Ujv848czrSq9c5XGcdDa2xnEf3daU3xg==}
+  /@nomicfoundation/edr-linux-arm64-gnu@0.3.7:
+    resolution: {integrity: sha512-ds/CKlBoVXIihjhflhgPn13EdKWed6r5bgvMs/YwRqT5wldQAQJZWAfA2+nYm0Yi2gMGh1RUpBcfkyl4pq7G+g==}
     engines: {node: '>= 18'}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     optional: true
 
-  /@nomicfoundation/edr-linux-arm64-musl@0.3.5:
-    resolution: {integrity: sha512-cVFRQjyABBlsbDj+XTczYBfrCHprZ6YNzN8gGGSqAh+UGIJkAIRomK6ar27GyJLNx3HkgbuDoi/9kA0zOo/95w==}
+  /@nomicfoundation/edr-linux-arm64-musl@0.3.7:
+    resolution: {integrity: sha512-e29udiRaPujhLkM3+R6ju7QISrcyOqpcaxb2FsDWBkuD7H8uU9JPZEyyUIpEp5uIY0Jh1eEJPKZKIXQmQAEAuw==}
     engines: {node: '>= 18'}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     optional: true
 
-  /@nomicfoundation/edr-linux-x64-gnu@0.3.5:
-    resolution: {integrity: sha512-CjOg85DfR1Vt0fQWn5U0qi26DATK9tVzo3YOZEyI0JBsnqvk43fUTPv3uUAWBrPIRg5O5kOc9xG13hSpCBBxBg==}
+  /@nomicfoundation/edr-linux-x64-gnu@0.3.7:
+    resolution: {integrity: sha512-/xkjmTyv+bbJ4akBCW0qzFKxPOV4AqLOmqurov+s9umHb16oOv72osSa3SdzJED2gHDaKmpMITT4crxbar4Axg==}
     engines: {node: '>= 18'}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     optional: true
 
-  /@nomicfoundation/edr-linux-x64-musl@0.3.5:
-    resolution: {integrity: sha512-hvX8bBGpBydAVevzK8jsu2FlqVZK1RrCyTX6wGHnltgMuBaoGLHYtNHiFpteOaJw2byYMiORc2bvj+98LhJ0Ew==}
+  /@nomicfoundation/edr-linux-x64-musl@0.3.7:
+    resolution: {integrity: sha512-QwBP9xlmsbf/ldZDGLcE4QiAb8Zt46E/+WLpxHBATFhGa7MrpJh6Zse+h2VlrT/SYLPbh2cpHgSmoSlqVxWG9g==}
     engines: {node: '>= 18'}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     optional: true
 
-  /@nomicfoundation/edr-win32-x64-msvc@0.3.5:
-    resolution: {integrity: sha512-IJXjW13DY5UPsx/eG5DGfXtJ7Ydwrvw/BTZ2Y93lRLHzszVpSmeVmlxjZP5IW2afTSgMLaAAsqNw4NhppRGN8A==}
+  /@nomicfoundation/edr-win32-x64-msvc@0.3.7:
+    resolution: {integrity: sha512-j/80DEnkxrF2ewdbk/gQ2EOPvgF0XSsg8D0o4+6cKhUVAW6XwtWKzIphNL6dyD2YaWEPgIrNvqiJK/aln0ww4Q==}
     engines: {node: '>= 18'}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     optional: true
 
-  /@nomicfoundation/edr@0.3.5:
-    resolution: {integrity: sha512-dPSM9DuI1sr71gqWUMgLo8MjHQWO4+WNDm3iWaT6P4vUFJReZX5qwA5X+3UwIPBry8GvNY084u7yWUvB3/8rqA==}
+  /@nomicfoundation/edr@0.3.7:
+    resolution: {integrity: sha512-v2JFWnFKRsnOa6PDUrD+sr8amcdhxnG/YbL7LzmgRGU1odWEyOF4/EwNeUajQr4ZNKVWrYnJ6XjydXtUge5OBQ==}
     engines: {node: '>= 18'}
     optionalDependencies:
-      '@nomicfoundation/edr-darwin-arm64': 0.3.5
-      '@nomicfoundation/edr-darwin-x64': 0.3.5
-      '@nomicfoundation/edr-linux-arm64-gnu': 0.3.5
-      '@nomicfoundation/edr-linux-arm64-musl': 0.3.5
-      '@nomicfoundation/edr-linux-x64-gnu': 0.3.5
-      '@nomicfoundation/edr-linux-x64-musl': 0.3.5
-      '@nomicfoundation/edr-win32-x64-msvc': 0.3.5
+      '@nomicfoundation/edr-darwin-arm64': 0.3.7
+      '@nomicfoundation/edr-darwin-x64': 0.3.7
+      '@nomicfoundation/edr-linux-arm64-gnu': 0.3.7
+      '@nomicfoundation/edr-linux-arm64-musl': 0.3.7
+      '@nomicfoundation/edr-linux-x64-gnu': 0.3.7
+      '@nomicfoundation/edr-linux-x64-musl': 0.3.7
+      '@nomicfoundation/edr-win32-x64-msvc': 0.3.7
 
   /@nomicfoundation/ethereumjs-common@4.0.4:
     resolution: {integrity: sha512-9Rgb658lcWsjiicr5GzNCjI1llow/7r0k50dLL95OJ+6iZJcVbi15r3Y0xh2cIO+zgX0WIHcbzIu6FeQf9KPrg==}
@@ -3444,8 +3444,8 @@ packages:
   /graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
 
-  /hardhat@2.22.3(typescript@5.4.2):
-    resolution: {integrity: sha512-k8JV2ECWNchD6ahkg2BR5wKVxY0OiKot7fuxiIpRK0frRqyOljcR2vKwgWSLw6YIeDcNNA4xybj7Og7NSxr2hA==}
+  /hardhat@2.22.4(typescript@5.4.2):
+    resolution: {integrity: sha512-09qcXJFBHQUaraJkYNr7XlmwjOj27xBB0SL2rYS024hTj9tPMbp26AFjlf5quBMO9SR4AJFg+4qWahcYcvXBuQ==}
     hasBin: true
     peerDependencies:
       ts-node: '*'
@@ -3458,7 +3458,7 @@ packages:
     dependencies:
       '@ethersproject/abi': 5.7.0
       '@metamask/eth-sig-util': 4.0.1
-      '@nomicfoundation/edr': 0.3.5
+      '@nomicfoundation/edr': 0.3.7
       '@nomicfoundation/ethereumjs-common': 4.0.4
       '@nomicfoundation/ethereumjs-tx': 5.0.4
       '@nomicfoundation/ethereumjs-util': 9.0.4
