@@ -1,6 +1,6 @@
 import { type HardhatUserConfig, task } from 'hardhat/config';
 
-function getNumber(env: string, defaultValue?: number): number | undefined {
+function getNumber(env: string, defaultValue?: any): number | undefined {
   return process.env[env] ? Number(process.env[env]) : defaultValue;
 }
 
@@ -19,6 +19,7 @@ function getHardhatUserConfig(): HardhatUserConfig {
   const hardhat: NonNullable<HardhatUserConfig['networks']>['hardhat'] = {
     chainId: getNumber('HARDHAT_CHAIN_ID', 31337),
     allowUnlimitedContractSize: getBoolean('HARDHAT_ALLOW_UNLIMITED_CONTRACT_SIZE', true),
+    gas: getNumber('HARDHAT_GAS', 'auto'),
     mining: {
       auto: getBoolean('HARDHAT_MINING_AUTO', false),
       interval: getNumber('HARDHAT_MINING_INTERVAL', 6_000),
