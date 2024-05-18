@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "testcontainers": "^10.9.0",
-    "viem": "^2.10.5"
+    "viem": "^2.10.9"
   },
   "devDependencies": {
     "@workspace/jest-preset": "workspace:*",

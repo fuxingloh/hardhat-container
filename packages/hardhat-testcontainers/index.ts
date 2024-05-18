@@ -74,8 +74,8 @@ export class StartedHardhatContainer extends AbstractStartedContainer {
     this.client = this.createTestClient();
   }
 
-  getHostRpcEndpoint(): string {
-    return `http://${this.getHost()}:${this.getMappedPort(8545)}`;
+  getHostRpcEndpoint(host: string = this.getHost()): string {
+    return `http://${host}:${this.getMappedPort(8545)}`;
   }
 
   private createTestClient() {
