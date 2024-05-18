@@ -18,6 +18,11 @@
   ],
   "packageRules": [
     {
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["peerDependencies"],
+      "enabled": false
+    },
+    {
       "matchPackageNames": ["node", "typescript", "@types/node"],
       "enabled": false
     },
