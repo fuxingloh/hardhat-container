@@ -80,8 +80,8 @@ importers:
         specifier: workspace:*
         version: link:../hardhat-container
       viem:
-        specifier: ^2.12.1
-        version: 2.12.1(typescript@5.4.2)
+        specifier: ^2.12.3
+        version: 2.12.3(typescript@5.4.2)
 
   workspace/eslint-config:
     dependencies:
@@ -5974,8 +5974,8 @@ packages:
       convert-source-map: 2.0.0
     dev: true
 
-  /viem@2.12.1(typescript@5.4.2):
-    resolution: {integrity: sha512-71gxcGCXdNXQuBhpqXblVRH1F3hP/wONCptVOCW4r6VrCEXL/9vfNyCdQKtK/0WGyXm04Zs9Jf/AOAxKqf6FmQ==}
+  /viem@2.12.3(typescript@5.4.2):
+    resolution: {integrity: sha512-t7wh4ormUmD60w4bh89L8nCFETuiXXTVnj2TTk7WramnkwDjpfbWhd9DZhRGRYn1FazXi2sLk108OEZ+v6CM/Q==}
     peerDependencies:
       typescript: '>=5.0.4'
     peerDependenciesMeta:
