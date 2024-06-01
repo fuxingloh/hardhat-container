@@ -39,7 +39,7 @@
     "@workspace/tsconfig": "workspace:*",
     "hardhat": "2.22.4",
     "hardhat-container": "workspace:*",
-    "viem": "^2.13.2"
+    "viem": "^2.13.3"
   },
   "peerDependencies": {
     "viem": "^2"
