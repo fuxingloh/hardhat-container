@@ -29,6 +29,9 @@ importers:
       '@workspace/prettier-config':
         specifier: workspace:*
         version: link:workspace/prettier-config
+      '@workspace/tsconfig':
+        specifier: workspace:*
+        version: link:workspace/tsconfig
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
