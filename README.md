@@ -1,4 +1,14 @@
-# Hardhat Container
+# Chainfile Hardhat
+
+Part of the Chainfile project/initiative, this library provides a Docker image for running Hardhat in a container
+for toolchain isolation.
+This is particularly useful for language-agnostic development and parallelization of systems.
+
+## `hardhat-testcontainers`
+
+```shell
+npm i -D hardhat-testcontainers
+```
 
 ```typescript
 import { HardhatContainer, StartedHardhatContainer } from 'hardhat-testcontainers';
@@ -22,11 +32,6 @@ it('should rpc(eth_blockNumber) via viem', async () => {
   expect(blockNumber).toStrictEqual(BigInt(0));
 });
 ```
-
-## Motivation
-
-This library creates a Docker image that isolates the toolchain for Hardhat from the host system.
-This is particularly useful for language-agnostic development and parallelization of systems.
 
 ## License
 

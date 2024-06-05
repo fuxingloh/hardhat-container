@@ -1,22 +1,28 @@
-import { type HardhatUserConfig, task } from 'hardhat/config';
+const { task } = require('hardhat/config');
 
-function getNumber(env: string, defaultValue?: any): number | undefined {
+function getNumber(env, defaultValue) {
   return process.env[env] ? Number(process.env[env]) : defaultValue;
 }
 
-function getString(env: string, defaultValue?: string): string | undefined {
+function getString(env, defaultValue) {
   return process.env[env] ?? defaultValue;
 }
 
-function getBoolean(env: string, defaultValue: boolean): boolean {
+function getBoolean(env, defaultValue) {
   if (process.env[env] === undefined) {
     return defaultValue;
   }
   return process.env[env] === 'true';
 }
 
-function getHardhatUserConfig(): HardhatUserConfig {
-  const hardhat: NonNullable<HardhatUserConfig['networks']>['hardhat'] = {
+/**
+ * @return import('hardhat/config').HardhatUserConfig
+ */
+function getHardhatUserConfig() {
+  /**
+   * @type NonNullable<import('hardhat/config').HardhatUserConfig['networks']>['hardhat']
+   */
+  const hardhat = {
     chainId: getNumber('HARDHAT_CHAIN_ID', 31337),
     allowUnlimitedContractSize: getBoolean('HARDHAT_ALLOW_UNLIMITED_CONTRACT_SIZE', true),
     gas: getNumber('HARDHAT_GAS', 'auto'),
@@ -53,4 +59,4 @@ task('container').setAction(async (_, hre) => {
   await hre.run('node');
 });
 
-export default getHardhatUserConfig();
+module.exports = getHardhatUserConfig();

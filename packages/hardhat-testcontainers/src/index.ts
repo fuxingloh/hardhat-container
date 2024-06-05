@@ -13,10 +13,10 @@ import {
 } from 'viem';
 import { hardhat } from 'viem/chains';
 
-import { devDependencies } from './package.json';
+import { devDependencies } from '../package.json';
 
 export class HardhatContainer extends GenericContainer {
-  constructor(image: string = `ghcr.io/fuxingloh/hardhat-container:${devDependencies['hardhat']}`) {
+  constructor(image: string = `ghcr.io/vetumorg/hardhat:${devDependencies['hardhat']}`) {
     super(image);
 
     this.withWaitStrategy(Wait.forLogMessage('Started HTTP and WebSocket JSON-RPC server at'));
