@@ -25,14 +25,6 @@
     {
       "matchPackageNames": ["node", "typescript", "@types/node"],
       "enabled": false
-    },
-    {
-      "matchPackagePatterns": ["^@contentedjs/"],
-      "groupName": "@contentedjs"
-    },
-    {
-      "matchPackagePatterns": ["^@eslint/", "^eslint$"],
-      "groupName": "@eslint"
     }
   ]
 }
