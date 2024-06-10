@@ -17,8 +17,12 @@
       "cache": false
     },
     "test": {
-      "inputs": ["./src/**"],
-      "dependsOn": ["^build"]
+      "dependsOn": ["hardhat-docker#build:docker", "^build"]
+    },
+    "hardhat-testcontainers#build": {
+      "inputs": ["src/**"],
+      "outputs": ["dist/**"],
+      "dependsOn": ["hardhat-docker#build:docker", "^build"]
     },
     "lint": {
       "outputs": []
