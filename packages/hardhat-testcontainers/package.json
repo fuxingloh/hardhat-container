@@ -33,8 +33,8 @@
     "testcontainers": "^10.9.0"
   },
   "devDependencies": {
-    "hardhat": "2.22.3",
-    "viem": "^2.13.6"
+    "hardhat": "2.22.5",
+    "viem": "^2.13.7"
   },
   "peerDependencies": {
     "viem": "^2"

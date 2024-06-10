@@ -2,9 +2,15 @@
   "$schema": "https://chainfile.org/schema.json",
   "caip2": "eip155:31337",
   "name": "Hardhat",
+  "values": {
+    "version": "2.22.5"
+  },
   "containers": {
     "hardhat": {
-      "image": "ghcr.io/vetumorg/hardhat:2.22.3",
+      "image": "ghcr.io/vetumorg/hardhat",
+      "tag": {
+        "$value": "version"
+      },
       "source": "https://github.com/vetumorg/chainfile-hardhat",
       "resources": {
         "cpu": 0.25,

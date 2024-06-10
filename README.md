@@ -1,10 +1,13 @@
 # Chainfile Hardhat
 
-Part of the Chainfile project/initiative, this library provides a Docker image for running Hardhat in a container
-for toolchain isolation.
+Part of the Chainfile ecosystem,
+this library provides a Docker image for running Hardhat in a container for toolchain isolation.
 This is particularly useful for language-agnostic development and parallelization of systems.
 
 ## `hardhat-testcontainers`
+
+This is a standalone testcontainers-node package for running Hardhat in a container for testing purposes.
+You don't need to use the Chainfile ecosystem to use this package.
 
 ```shell
 npm i -D hardhat-testcontainers
