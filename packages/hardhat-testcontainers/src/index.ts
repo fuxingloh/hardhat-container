@@ -71,18 +71,18 @@ export class StartedHardhatContainer extends AbstractStartedContainer {
 
   constructor(startedTestContainer: StartedTestContainer) {
     super(startedTestContainer);
-    this.client = this.createTestClient();
+    this.client = this.createClient();
   }
 
   getHostRpcEndpoint(host: string = this.getHost()): string {
     return `http://${host}:${this.getMappedPort(8545)}`;
   }
 
-  private createTestClient() {
+  createClient(host: string = this.getHost()): HardhatClient {
     return createClient({
       cacheTime: 0,
       chain: hardhat,
-      transport: http(this.getHostRpcEndpoint()),
+      transport: http(this.getHostRpcEndpoint(host)),
       name: 'Hardhat Client',
       key: 'hardhat',
       type: 'hardhat',

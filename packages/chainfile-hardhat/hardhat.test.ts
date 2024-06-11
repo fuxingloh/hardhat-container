@@ -1,10 +1,10 @@
 import { ChainfileTestcontainers } from '@chainfile/testcontainers';
 import { afterAll, beforeAll, describe, expect, it } from '@jest/globals';
 
-import localhost from './localhost.json';
+import hardhat from './hardhat.json';
 
 describe('default', () => {
-  const testcontainers = new ChainfileTestcontainers(localhost);
+  const testcontainers = new ChainfileTestcontainers(hardhat);
 
   beforeAll(async () => {
     await testcontainers.start();
@@ -27,7 +27,7 @@ describe('default', () => {
 });
 
 describe('v2.22.3', () => {
-  const testcontainers = new ChainfileTestcontainers(localhost, {
+  const testcontainers = new ChainfileTestcontainers(hardhat, {
     version: '2.22.3',
   });
 
