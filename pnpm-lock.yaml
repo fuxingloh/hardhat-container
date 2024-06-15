@@ -79,8 +79,8 @@ importers:
         specifier: 2.22.5
         version: 2.22.5(typescript@5.4.5)
       viem:
-        specifier: ^2.13.7
-        version: 2.13.7(typescript@5.4.5)
+        specifier: ^2.14.0
+        version: 2.14.0(typescript@5.4.5)
 
   workspace/eslint-config:
     dependencies:
@@ -5919,8 +5919,8 @@ packages:
       convert-source-map: 2.0.0
     dev: true
 
-  /viem@2.13.7(typescript@5.4.5):
-    resolution: {integrity: sha512-SZWn9LPrz40PHl4PM2iwkPTTtjWPDFsnLr32UwpqC/Z5f0AwxitjLyZdDKcImvbWZ3vLQ0oPggR1aLlqvTcUug==}
+  /viem@2.14.0(typescript@5.4.5):
+    resolution: {integrity: sha512-+XnuRNONDRyMNEM+1n6Ak41Py0KBFOmirQ67wPv//ytCmNIJhmy8vqhdFREr3m51GAGgDkllh4JoAdCUUaZJLw==}
     peerDependencies:
       typescript: '>=5.0.4'
     peerDependenciesMeta:
