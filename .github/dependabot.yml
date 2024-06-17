@@ -9,7 +9,7 @@ updates:
     schedule:
       interval: 'weekly'
     groups:
-      development:
+      dev:
         dependency-type: development
         update-types:
           - 'minor'
@@ -17,17 +17,5 @@ updates:
         exclude-patterns:
           - 'viem'
           - 'hardhat'
-          - 'eslint'
           - 'chainfile-*'
           - '@chainfile/*'
-      workspace:
-        update-types:
-          - 'minor'
-          - 'patch'
-        patterns:
-          - 'prettier-*'
-          - 'typescript-eslint'
-          - 'globals'
-          - '@eslint/*'
-          - 'eslint'
-          - 'eslint-*'
