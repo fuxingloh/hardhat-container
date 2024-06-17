@@ -1,7 +1,7 @@
-import { afterAll, beforeAll, describe, expect, it } from '@jest/globals';
+import { afterAll, beforeAll, describe, expect, it } from '@workspace/jest/globals';
+import waitFor from '@workspace/jest/wait-for';
 import { createPublicClient, getContract, getContractAddress, http } from 'viem';
 import { hardhat } from 'viem/chains';
-import waitFor from 'wait-for-expect';
 
 import { HardhatClient, HardhatContainer, StartedHardhatContainer } from './index';
 

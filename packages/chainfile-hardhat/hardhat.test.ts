@@ -1,5 +1,5 @@
 import { ChainfileTestcontainers } from '@chainfile/testcontainers';
-import { afterAll, beforeAll, describe, expect, it } from '@jest/globals';
+import { afterAll, beforeAll, describe, expect, it } from '@workspace/jest/globals';
 
 import hardhat from './hardhat.json';
 
