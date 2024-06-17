@@ -17,6 +17,9 @@ importers:
       '@workspace/jest':
         specifier: workspace:*
         version: link:workspace/jest
+      '@workspace/tsconfig':
+        specifier: workspace:*
+        version: link:workspace/tsconfig
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -108,6 +111,8 @@ importers:
       wait-for-expect:
         specifier: ^3.0.2
         version: 3.0.2
+
+  workspace/tsconfig: {}
 
 packages:
 
