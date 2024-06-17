@@ -1,1 +1,2 @@
-export * from 'wait-for-expect';
+import waitFor from 'wait-for-expect';
+export default waitFor;
