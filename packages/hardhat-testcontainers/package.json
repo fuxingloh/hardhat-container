@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "hardhat": "2.22.5",
-    "viem": "^2.14.0"
+    "viem": "^2.14.2"
   },
   "peerDependencies": {
     "viem": "^2"
