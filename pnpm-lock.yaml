@@ -17,6 +17,9 @@ importers:
       '@workspace/jest':
         specifier: workspace:*
         version: link:workspace/jest
+      '@workspace/prettier-config':
+        specifier: workspace:*
+        version: link:workspace/prettier-config
       '@workspace/tsconfig':
         specifier: workspace:*
         version: link:workspace/tsconfig
@@ -35,9 +38,6 @@ importers:
       prettier:
         specifier: ^3.3.2
         version: 3.3.2
-      prettier-plugin-packagejson:
-        specifier: ^2.5.0
-        version: 2.5.0(prettier@3.3.2)
       turbo:
         specifier: ^2.0.4
         version: 2.0.4
@@ -111,6 +111,12 @@ importers:
       wait-for-expect:
         specifier: ^3.0.2
         version: 3.0.2
+
+  workspace/prettier-config:
+    dependencies:
+      prettier-plugin-packagejson:
+        specifier: ^2.5.0
+        version: 2.5.0(prettier@3.3.2)
 
   workspace/tsconfig: {}
 
