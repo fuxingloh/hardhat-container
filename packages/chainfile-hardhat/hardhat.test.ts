@@ -1,10 +1,10 @@
-import { ChainfileTestcontainers } from '@chainfile/testcontainers';
+import { CFTestcontainers } from '@chainfile/testcontainers';
 import { afterAll, beforeAll, describe, expect, it } from '@workspace/jest/globals';
 
 import hardhat from './hardhat.json';
 
 describe('default', () => {
-  const testcontainers = new ChainfileTestcontainers(hardhat);
+  const testcontainers = new CFTestcontainers(hardhat);
 
   beforeAll(async () => {
     await testcontainers.start();
@@ -27,7 +27,7 @@ describe('default', () => {
 });
 
 describe('v2.22.3', () => {
-  const testcontainers = new ChainfileTestcontainers(hardhat, {
+  const testcontainers = new CFTestcontainers(hardhat, {
     version: '2.22.3',
   });
 
