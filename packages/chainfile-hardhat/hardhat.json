@@ -3,7 +3,7 @@
   "caip2": "eip155:31337",
   "name": "Hardhat",
   "description": "Hardhat is a development environment to compile, deploy, test, and debug your Ethereum software.",
-  "values": {
+  "params": {
     "version": {
       "description": "Hardhat version to use, the container image is built in chainfile-hardhat repository. Published in to ghcr.io/vetumorg/hardhat, to see the available versions check github.com/vetumorg/chainfile-hardhat/pkgs/container/hardhat",
       "default": "2.22.5"
@@ -13,7 +13,7 @@
     "hardhat": {
       "image": "ghcr.io/vetumorg/hardhat",
       "tag": {
-        "$value": "version"
+        "$param": "version"
       },
       "source": "https://github.com/vetumorg/chainfile-hardhat",
       "resources": {
