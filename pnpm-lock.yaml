@@ -113,7 +113,7 @@ importers:
         version: 3.0.2
 
   workspace/prettier-config:
-    dependencies:
+    devDependencies:
       prettier-plugin-packagejson:
         specifier: ^2.5.0
         version: 2.5.0(prettier@3.3.2)
