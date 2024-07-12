@@ -17,6 +17,9 @@
     "push:docker": {
       "cache": false
     },
+    "test": {
+      "dependsOn": ["hardhat-container#build:docker", "^build"]
+    },
     "hardhat-testcontainers#build": {
       "inputs": ["src/**"],
       "outputs": ["dist/**"],
