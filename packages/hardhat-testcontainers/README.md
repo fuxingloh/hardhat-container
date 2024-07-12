@@ -1,5 +1,4 @@
-This project is part of the [Chainfile](https://chainfile.org) ecosystem;
-it provides a Docker image for running Hardhat in a container for toolchain isolation.
+This project provides a Docker image for running Hardhat in a container for toolchain isolation.
 
 ```shell
 npm i -D hardhat-testcontainers viem

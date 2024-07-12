@@ -1,8 +1,9 @@
-# Chainfile Hardhat
+# Hardhat Container
 
-Part of the [Chainfile](https://chainfile.org) ecosystem,
-this library provides a Docker image for running Hardhat in a container for toolchain isolation.
+This library provides a Docker image for running Hardhat in a container for toolchain isolation.
 This is particularly useful for language-agnostic development and parallelization of systems.
+
+> Initially created for use in [fuxingloh/chainfile](https://github.com/fuxingloh/chainfile).
 
 ## `hardhat-testcontainers`
 
