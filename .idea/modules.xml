@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/chainfile-hardhat.iml" filepath="$PROJECT_DIR$/.idea/chainfile-hardhat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/hardhat-container.iml" filepath="$PROJECT_DIR$/.idea/hardhat-container.iml" />
     </modules>
   </component>
 </project>
