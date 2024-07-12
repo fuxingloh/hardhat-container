@@ -16,13 +16,10 @@
     "push:docker": {
       "cache": false
     },
-    "test": {
-      "dependsOn": ["hardhat-docker#build:docker", "^build"]
-    },
     "hardhat-testcontainers#build": {
       "inputs": ["src/**"],
       "outputs": ["dist/**"],
-      "dependsOn": ["hardhat-docker#build:docker", "^build"]
+      "dependsOn": ["hardhat-container#build:docker", "^build"]
     },
     "lint": {
       "outputs": []

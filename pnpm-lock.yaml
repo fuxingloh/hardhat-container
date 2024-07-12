@@ -45,13 +45,7 @@ importers:
         specifier: 5.5.3
         version: 5.5.3
 
-  packages/chainfile-hardhat:
-    devDependencies:
-      '@chainfile/testcontainers':
-        specifier: ^0.8.0
-        version: 0.8.0
-
-  packages/hardhat-docker:
+  packages/hardhat-container:
     dependencies:
       hardhat:
         specifier: 2.22.5
@@ -302,15 +296,6 @@ packages:
 
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
-
-  '@chainfile/docker@0.8.0':
-    resolution: {integrity: sha512-kisNfhBygOXQPGMkV7Xw5dlv8UyrpmhJ0iRdjLl1az6N3UB9FmHThw7t7wVDOnK5rroor1grXc06r0j9tm6Uaw==}
-
-  '@chainfile/schema@0.8.0':
-    resolution: {integrity: sha512-kSqgXXsVelIFi5jU7uRgDS6y24rwajCzjlz7fO/sUb7dt/WFGMVweITsmTrU1MIWT/XupTW44mgMt/bXzajH1Q==}
-
-  '@chainfile/testcontainers@0.8.0':
-    resolution: {integrity: sha512-RaG32/8dZaabDiS0hkt2wGQZurIE6ohZaoUd4MOkA0GtmPZHjo9kNR3unmBoyC8qYan+1Yso3t2QZceq3+5jKQ==}
 
   '@eslint-community/eslint-utils@4.4.0':
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==}
@@ -955,19 +940,8 @@ packages:
     resolution: {integrity: sha512-4I7Td01quW/RpocfNayFdFVk1qSuoh0E7JrbRJ16nH01HhKFQ88INq9Sd+nd72zqRySlr9BmDA8xlEJ6vJMrYA==}
     engines: {node: '>=8'}
 
-  ajv-formats@3.0.1:
-    resolution: {integrity: sha512-8iUql50EUR+uUcdRQ3HDqa6EVyo3docL8g5WJ3FNcWmu62IbkGUue/pEyLBW8VGKKucTPgqeks4fIU1DA4yowQ==}
-    peerDependencies:
-      ajv: ^8.0.0
-    peerDependenciesMeta:
-      ajv:
-        optional: true
-
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
-
-  ajv@8.16.0:
-    resolution: {integrity: sha512-F0twR8U1ZU67JIEtekUcLkXkoO5mMMmgGD8sK/xUFzJ805jxHQl92hImFAqqXMyMYjSPOyUPAwHYhB72g5sTXw==}
 
   ansi-align@3.0.1:
     resolution: {integrity: sha512-IOfwwBF5iczOjp/WeY4YxyjqAFMQoZufdQWDd19SEExbVLNXqvpzSJ/M7Za4/sCPmQ0+GRquoA7bGcINcxew6w==}
@@ -2303,9 +2277,6 @@ packages:
   json-schema-traverse@0.4.1:
     resolution: {integrity: sha512-xbbCH5dCYU5T8LcEhhuh7HJ88HXuW3qsI3Y0zOZFKfZEHcpWiHU/Jxzk629Brsab/mMiHQti9wMP+845RPe3Vg==}
 
-  json-schema-traverse@1.0.0:
-    resolution: {integrity: sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==}
-
   json-stable-stringify-without-jsonify@1.0.1:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
 
@@ -3605,25 +3576,6 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
-  '@chainfile/docker@0.8.0':
-    dependencies:
-      '@chainfile/schema': 0.8.0
-      js-yaml: 4.1.0
-
-  '@chainfile/schema@0.8.0':
-    dependencies:
-      ajv: 8.16.0
-      ajv-formats: 3.0.1(ajv@8.16.0)
-
-  '@chainfile/testcontainers@0.8.0':
-    dependencies:
-      '@chainfile/docker': 0.8.0
-      '@chainfile/schema': 0.8.0
-      testcontainers: 10.9.0
-    transitivePeerDependencies:
-      - encoding
-      - supports-color
-
   '@eslint-community/eslint-utils@4.4.0(eslint@8.57.0)':
     dependencies:
       eslint: 8.57.0
@@ -4440,22 +4392,11 @@ snapshots:
       clean-stack: 2.2.0
       indent-string: 4.0.0
 
-  ajv-formats@3.0.1(ajv@8.16.0):
-    optionalDependencies:
-      ajv: 8.16.0
-
   ajv@6.12.6:
     dependencies:
       fast-deep-equal: 3.1.3
       fast-json-stable-stringify: 2.1.0
       json-schema-traverse: 0.4.1
-      uri-js: 4.4.1
-
-  ajv@8.16.0:
-    dependencies:
-      fast-deep-equal: 3.1.3
-      json-schema-traverse: 1.0.0
-      require-from-string: 2.0.2
       uri-js: 4.4.1
 
   ansi-align@3.0.1:
@@ -6206,8 +6147,6 @@ snapshots:
   json-parse-even-better-errors@2.3.1: {}
 
   json-schema-traverse@0.4.1: {}
-
-  json-schema-traverse@1.0.0: {}
 
   json-stable-stringify-without-jsonify@1.0.1: {}
 
