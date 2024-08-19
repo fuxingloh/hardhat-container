@@ -3,6 +3,6 @@
   "private": true,
   "main": "./index.js",
   "devDependencies": {
-    "prettier-plugin-packagejson": "^2.5.0"
+    "prettier-plugin-packagejson": "^2.5.1"
   }
 }
